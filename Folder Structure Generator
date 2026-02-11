@@ -1,0 +1,10 @@
+import os
+
+folders = ["data", "models", "scripts", "notebooks", "output"]
+
+project = input("Enter the Project name: ")
+
+for i in folders:
+    path = os.path.join(project, i)
+    os.makedirs(path, exist_ok=True)
+    print(f"Created folder: {path}")
